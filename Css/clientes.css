@@ -1,0 +1,338 @@
+/* --- RESET & VARIABLES GLOBALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --primary-blue: #3E5CF4; /* Tono azul vibrante de ClienGo */
+    --light-gray-bg: #F8F9FD;
+    --text-dark: #1E232C;
+    --text-muted: #8391A1;
+    --text-white: #FFFFFF;
+    
+    /* Paleta de colores pastel para los Avatares de clientes */
+    --av-pink: #FADCE6;
+    --av-pink-txt: #A6265E;
+    --av-teal: #D5F3F0;
+    --av-teal-txt: #1E7E74;
+    --av-orange: #FFEAD2;
+    --av-orange-txt: #D97706;
+    --av-peach: #FCE2DB;
+    --av-peach-txt: #C2410C;
+    --av-green: #DEF7EC;
+    --av-green-txt: #03543F;
+    --av-blue: #E1EFFE;
+    --av-blue-txt: #1E429F;
+}
+
+body {
+    background-color: #E5E5E5;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Teléfono contenedor */
+.app-container {
+    width: 100%;
+    max-width: 412px;
+    background-color: var(--primary-blue);
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modificador para fondo predominantemente claro */
+.content-white-bg {
+    background-color: var(--light-gray-bg);
+}
+
+/* --- BLOQUE AZUL SUPERIOR --- */
+.top-blue-container {
+    background-color: var(--primary-blue);
+    padding-bottom: 24px;
+}
+
+/* Status Bar */
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    color: var(--text-white);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status-icons {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.icon-signal {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 10px;
+}
+.icon-signal span {
+    width: 3px;
+    background-color: currentColor;
+    border-radius: 1px;
+}
+.icon-signal span:nth-child(1) { height: 4px; }
+.icon-signal span:nth-child(2) { height: 6px; }
+.icon-signal span:nth-child(3) { height: 8px; }
+.icon-signal span:nth-child(4) { height: 10px; }
+
+.icon-battery {
+    width: 20px;
+    height: 11px;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    position: relative;
+    padding: 1px;
+}
+.icon-battery::after {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: 2px;
+    width: 2px;
+    height: 5px;
+    background-color: currentColor;
+    border-radius: 0 1px 1px 0;
+}
+.icon-battery-level {
+    height: 100%;
+    width: 85%;
+    background-color: currentColor;
+    border-radius: 1px;
+}
+
+/* Header */
+.header-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 0 20px;
+    color: var(--text-white);
+}
+
+.header-back-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.back-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    cursor: pointer;
+}
+
+.header-back-title h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.add-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background-color: var(--text-white);
+    color: var(--primary-blue);
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* --- CUERPO PRINCIPAL CON CURVAS REALES --- */
+.main-content {
+    background-color: var(--light-gray-bg);
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+    margin-top: -20px;
+    padding: 24px 20px;
+    flex-grow: 1;
+}
+
+/* Buscador y Filtro */
+.search-filter-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.search-box {
+    background-color: #F1F4FA;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    flex-grow: 1;
+    height: 48px;
+}
+
+.search-icon {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-right: 10px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    width: 100%;
+    color: var(--text-dark);
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: #9CA3AF;
+}
+
+.filter-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background-color: var(--text-white);
+    border: 1px solid #E5E7EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filter-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: #4B5563;
+    stroke-width: 2;
+}
+
+/* --- LISTA DE CLIENTES --- */
+.clients-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.client-item {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 16px 0;
+    border-bottom: 1px solid #F0F2F5; /* Separador sutil */
+    position: relative;
+}
+
+/* Círculos con las iniciales */
+.avatar-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+/* Clases de colores individuales basados en la imagen */
+.av-pink { background-color: var(--av-pink); color: var(--av-pink-txt); }
+.av-teal { background-color: var(--av-teal); color: var(--av-teal-txt); }
+.av-orange { background-color: var(--av-orange); color: var(--av-orange-txt); }
+.av-peach { background-color: var(--av-peach); color: var(--av-peach-txt); }
+.av-green { background-color: var(--av-green); color: var(--av-green-txt); }
+.av-blue { background-color: var(--av-blue); color: var(--av-blue-txt); }
+
+.client-info {
+    flex-grow: 1;
+}
+
+.client-info h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.client-meta {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Separación amplia como en el diseño */
+}
+
+.meta-phone {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.meta-mail {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+.arrow-right {
+    font-size: 22px;
+    color: #C1C7D0;
+    font-weight: 300;
+    padding-left: 10px;
+}
+
+/* --- MENÚ DE NAVEGACIÓN INFERIOR --- */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 412px;
+    background-color: var(--text-white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0 16px 0;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.04);
+    z-index: 10;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #9CA3AF;
+    font-size: 11px;
+    font-weight: 500;
+    text-decoration: none;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.nav-item.active {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.nav-item svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}

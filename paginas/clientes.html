@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClienGo Clientes</title>
+    <link rel="stylesheet" href="../Css/clientes.css">
+</head>
+<body>
+
+    <div class="app-container content-white-bg">
+        
+        <div class="top-blue-container">
+            <div class="status-bar">
+                <div class="status-time">9:41</div>
+                <div class="status-icons">
+                    <div class="icon-signal">
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="icon-wifi">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21l-12-12c2.4-2.4 5.6-3.7 9-3.7s6.6 1.3 9 3.7l-12 12zm0-15.5c-2.4 0-4.7.9-6.4 2.6l6.4 6.4 6.4-6.4c-1.7-1.7-4-2.6-6.4-2.6z"/></svg>
+                    </div>
+                    <div class="icon-battery">
+                        <div class="icon-battery-level"></div>
+                    </div>
+                </div>
+            </div>
+
+            <header class="header-inline">
+                <div class="header-back-title">
+                    <div class="back-btn">
+                        <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                    </div>
+                    <h1>Clientes</h1>
+                </div>
+                <button class="add-btn">+</button>
+            </header>
+        </div>
+
+        <div class="main-content">
+            
+            <div class="search-filter-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Buscar cliente..." disabled>
+                </div>
+                <button class="filter-btn">
+                    <svg viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h6V7h-6V5h-2v6h2V9z"/></svg>
+                </button>
+            </div>
+
+            <div class="clients-list">
+                
+                <div class="client-item">
+                    <div class="avatar-circle av-pink">JP</div>
+                    <div class="client-info">
+                        <h2>Juan Pérez</h2>
+                        <div class="client-meta">
+                            <span class="meta-phone">📞 300 123 4567</span>
+                            <span class="meta-mail">✉</span>
+                        </div>
+                    </div>
+                    <div class="arrow-right">›</div>
+                </div>
+
+                <div class="client-item">
+                    <div class="avatar-circle av-teal">ML</div>
+                    <div class="client-info">
+                        <h2>María López</h2>
+                        <div class="client-meta">
+                            <span class="meta-phone">📞 301 234 5678</span>
+                            <span class="meta-mail">✉</span>
+                        </div>
+                    </div>
+                    <div class="arrow-right">›</div>
+                </div>
+
+                <div class="client-item">
+                    <div class="avatar-circle av-orange">CR</div>
+                    <div class="client-info">
+                        <h2>Carlos Ramirez</h2>
+                        <div class="client-meta">
+                            <span class="meta-phone">📞 302 345 6789</span>
+                            <span class="meta-mail">✉</span>
+                        </div>
+                    </div>
+                    <div class="arrow-right">›</div>
+                </div>
+
+                <div class="client-item">
+                    <div class="avatar-circle av-peach">LA</div>
+                    <div class="client-info">
+                        <h2>Laura Álvarez</h2>
+                        <div class="client-meta">
+                            <span class="meta-phone">📞 303 456 7890</span>
+                            <span class="meta-mail">✉</span>
+                        </div>
+                    </div>
+                    <div class="arrow-right">›</div>
+                </div>
+
+                <div class="client-item">
+                    <div class="avatar-circle av-green">AS</div>
+                    <div class="client-info">
+                        <h2>Andrés Salazar</h2>
+                        <div class="client-meta">
+                            <span class="meta-phone">📞 304 567 8901</span>
+                            <span class="meta-mail">✉</span>
+                        </div>
+                    </div>
+                    <div class="arrow-right">›</div>
+                </div>
+
+                <div class="client-item">
+                    <div class="avatar-circle av-blue">FS</div>
+                    <div class="client-info">
+                        <h2>Fernanda Soto</h2>
+                        <div class="client-meta">
+                            <span class="meta-phone">📞 305 678 9012</span>
+                            <span class="meta-mail">✉</span>
+                        </div>
+                    </div>
+                    <div class="arrow-right">›</div>
+                </div>
+
+            </div>
+        </div>
+
+        <nav class="bottom-nav">
+            <div class="nav-item">
+                <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                <div>Inicio</div>
+            </div>
+            <div class="nav-item active">
+                <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 1.34 5 3s1.34 3 5 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                <div>Clientes</div>
+            </div>
+            <div class="nav-item">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.89-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                <div>Ventas</div>
+            </div>
+            <div class="nav-item">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.89-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>
+                <div>Productos</div>
+            </div>
+            <div class="nav-item">
+                <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                <div>Más</div>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>
