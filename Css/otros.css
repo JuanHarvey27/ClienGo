@@ -169,8 +169,12 @@ body {
     background: white;
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
-    border-top: 1px solid #F4F4F4;
+    padding: 12px 0 20px; 
+    
+    border-top-left-radius: 24px;  
+    border-top-right-radius: 24px;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06); 
+    
     z-index: 100; 
 }
 
@@ -182,6 +186,7 @@ body {
     flex-direction: column;
     align-items: center;
     flex: 1; 
+    font-weight: 600; 
 }
 
 .bottom-nav .nav-item svg {
@@ -193,4 +198,5 @@ body {
 
 .nav-item.active {
     color: #4359F6;
+    font-weight: 700;
 }
