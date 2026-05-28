@@ -1,0 +1,337 @@
+/* --- RESET & VARIABLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --primary-blue: #3E5CF4;
+    --light-gray-bg: #F8F9FD;
+    --text-dark: #1E232C;
+    --text-muted: #6B7280;
+    --text-white: #FFFFFF;
+    --border-color: #E5E7EB;
+}
+
+body {
+    background-color: #E5E5E5;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Contenedor teléfono móvil */
+.app-container {
+    width: 100%;
+    max-width: 412px;
+    background-color: var(--primary-blue);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-white-bg {
+    background-color: var(--light-gray-bg);
+}
+
+/* --- BLOQUE SUPERIOR AZUL --- */
+.top-blue-container {
+    background-color: var(--primary-blue);
+    padding-bottom: 24px;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    color: var(--text-white);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status-icons {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.icon-signal {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 10px;
+}
+.icon-signal span {
+    width: 3px;
+    background-color: currentColor;
+}
+.icon-signal span:nth-child(1) { height: 4px; }
+.icon-signal span:nth-child(2) { height: 6px; }
+.icon-signal span:nth-child(3) { height: 8px; }
+.icon-signal span:nth-child(4) { height: 10px; }
+
+.icon-battery {
+    width: 20px;
+    height: 11px;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    position: relative;
+    padding: 1px;
+}
+.icon-battery-level {
+    height: 100%;
+    width: 85%;
+    background-color: currentColor;
+}
+
+.header-inline {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 0 20px;
+    color: var(--text-white);
+}
+
+.header-back-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.back-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    cursor: pointer;
+}
+
+.header-back-title h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* --- CUERPO PRINCIPAL --- */
+.main-content {
+    background-color: var(--light-gray-bg);
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+    margin-top: -20px;
+    padding: 24px 20px;
+    flex-grow: 1;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.section-label {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+/* Caja de Cliente */
+.select-client-box {
+    background-color: var(--text-white);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: var(--text-dark);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.arrow-select {
+    font-size: 22px;
+    color: #9CA3AF;
+    line-height: 1;
+}
+
+/* Tarjeta de Producto */
+.product-card {
+    background-color: var(--text-white);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.product-img-placeholder {
+    width: 54px;
+    height: 54px;
+    background-color: #F3F4F6;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-right: 14px;
+}
+
+.product-details {
+    flex-grow: 1;
+}
+
+.product-details h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.product-price {
+    font-size: 14px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.product-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Stepper (Contador numérico) */
+.stepper {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 4px 8px;
+    background-color: var(--light-gray-bg);
+}
+
+.step-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: var(--text-dark);
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.step-value {
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 18px;
+    text-align: center;
+    color: var(--text-dark);
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #EF4444;
+}
+
+/* Botón Agregar Producto */
+.add-product-btn {
+    width: 100%;
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 1px solid #C7D2FE;
+    border-radius: 14px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+/* Sección de Totales */
+.totals-section {
+    margin: 24px 0;
+    border-top: 1px dashed var(--border-color);
+    padding-top: 16px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: var(--text-dark);
+}
+
+.total-label {
+    font-weight: 500;
+}
+
+.total-value {
+    font-weight: 500;
+}
+
+.main-total {
+    margin-top: 16px;
+    font-size: 18px;
+    align-items: center;
+}
+
+.main-total .total-label {
+    font-weight: 700;
+}
+
+.total-value-highlight {
+    color: var(--primary-blue);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Estados de pago */
+.payment-status-container {
+    display: flex;
+    gap: 12px;
+}
+
+.status-option {
+    flex: 1;
+    padding: 14px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: var(--text-white);
+    cursor: pointer;
+}
+
+.option-pending {
+    border: 1px solid #C7D2FE;
+    color: var(--primary-blue);
+}
+
+.option-paid {
+    border: 1px solid #DEF7EC;
+    color: #10B981;
+}
+
+/* Estado activo verde (Pagado) */
+.option-paid.active {
+    background-color: #E6FBF2;
+    border-color: #10B981;
+}
+
+/* Botón de Acción Principal */
+.save-sale-btn {
+    width: 100%;
+    background-color: var(--primary-blue);
+    color: var(--text-white);
+    border: none;
+    border-radius: 16px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+    box-shadow: 0 4px 12px rgba(62, 92, 244, 0.2);
+}

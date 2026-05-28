@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClienGo Clientes</title>
-    <link rel="stylesheet" href="../Css/clientes.css">
+    <title>ClienGo Productos</title>
+    <link rel="stylesheet" href="../Css/productos.css">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
                     <div class="back-btn">
                         <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                     </div>
-                    <h1>Clientes</h1>
+                    <h1>Productos</h1>
                 </div>
                 <button class="add-btn">+</button>
             </header>
@@ -39,86 +39,61 @@
 
         <div class="main-content">
             
-            <div class="search-filter-container">
+            <div class="search-container">
                 <div class="search-box">
                     <span class="search-icon">🔍</span>
-                    <input type="text" placeholder="Buscar cliente..." disabled>
+                    <input type="text" placeholder="Buscar producto..." disabled>
                 </div>
-                <button class="filter-btn">
-                    <svg viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h6V7h-6V5h-2v6h2V9z"/></svg>
-                </button>
             </div>
 
-            <div class="clients-list">
+            <div class="products-list">
                 
-                <div class="client-item">
-                    <div class="avatar-circle av-pink">JP</div>
-                    <div class="client-info">
-                        <h2>Juan Pérez</h2>
-                        <div class="client-meta">
-                            <span class="meta-phone">📞 300 123 4567</span>
-                            <span class="meta-mail">✉</span>
-                        </div>
+                <div class="product-item">
+                    <div class="product-img-wrapper">🎧</div>
+                    <div class="product-info">
+                        <h2>Audifonos Inalámbricos</h2>
+                        <p class="product-price">$80.000</p>
+                        <p class="product-stock">En stock: 15</p>
                     </div>
                     <div class="arrow-right">›</div>
                 </div>
 
-                <div class="client-item">
-                    <div class="avatar-circle av-teal">ML</div>
-                    <div class="client-info">
-                        <h2>María López</h2>
-                        <div class="client-meta">
-                            <span class="meta-phone">📞 301 234 5678</span>
-                            <span class="meta-mail">✉</span>
-                        </div>
+                <div class="product-item">
+                    <div class="product-img-wrapper">⌚</div>
+                    <div class="product-info">
+                        <h2>Reloj Inteligente</h2>
+                        <p class="product-price">$150.000</p>
+                        <p class="product-stock">En stock: 10</p>
                     </div>
                     <div class="arrow-right">›</div>
                 </div>
 
-                <div class="client-item">
-                    <div class="avatar-circle av-orange">CR</div>
-                    <div class="client-info">
-                        <h2>Carlos Ramirez</h2>
-                        <div class="client-meta">
-                            <span class="meta-phone">📞 302 345 6789</span>
-                            <span class="meta-mail">✉</span>
-                        </div>
+                <div class="product-item">
+                    <div class="product-img-wrapper">🔊</div>
+                    <div class="product-info">
+                        <h2>Parlante Bluetooth</h2>
+                        <p class="product-price">$120.000</p>
+                        <p class="product-stock">En stock: 8</p>
                     </div>
                     <div class="arrow-right">›</div>
                 </div>
 
-                <div class="client-item">
-                    <div class="avatar-circle av-peach">LA</div>
-                    <div class="client-info">
-                        <h2>Laura Álvarez</h2>
-                        <div class="client-meta">
-                            <span class="meta-phone">📞 303 456 7890</span>
-                            <span class="meta-mail">✉</span>
-                        </div>
+                <div class="product-item">
+                    <div class="product-img-wrapper">🔌</div>
+                    <div class="product-info">
+                        <h2>Cargador Rápido</h2>
+                        <p class="product-price">$45.000</p>
+                        <p class="product-stock">En stock: 20</p>
                     </div>
                     <div class="arrow-right">›</div>
                 </div>
 
-                <div class="client-item">
-                    <div class="avatar-circle av-green">AS</div>
-                    <div class="client-info">
-                        <h2>Andrés Salazar</h2>
-                        <div class="client-meta">
-                            <span class="meta-phone">📞 304 567 8901</span>
-                            <span class="meta-mail">✉</span>
-                        </div>
-                    </div>
-                    <div class="arrow-right">›</div>
-                </div>
-
-                <div class="client-item">
-                    <div class="avatar-circle av-blue">FS</div>
-                    <div class="client-info">
-                        <h2>Fernanda Soto</h2>
-                        <div class="client-meta">
-                            <span class="meta-phone">📞 305 678 9012</span>
-                            <span class="meta-mail">✉</span>
-                        </div>
+                <div class="product-item">
+                    <div class="product-img-wrapper">➰</div>
+                    <div class="product-info">
+                        <h2>Cable USB Tipo C</h2>
+                        <p class="product-price">$25.000</p>
+                        <p class="product-stock">En stock: 30</p>
                     </div>
                     <div class="arrow-right">›</div>
                 </div>
@@ -148,7 +123,8 @@
             <div>Más</div>
         </a>
     </nav>
-    
+
     </div>
+
 </body>
 </html>
